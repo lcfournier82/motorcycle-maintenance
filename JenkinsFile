@@ -1,0 +1,61 @@
+pipeline {
+    agent any
+
+    environment {
+        APP_NAME = 'motorcycle-maintenance-api'
+        DOCKER_IMAGE = "motorcycle-maintenance-api:latest"
+        JAR_NAME = 'motorcycle-maintenance-api.jar'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build with Maven') {
+            steps {
+                sh './mvnw clean package -DskipTests'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh "docker build -t $DOCKER_IMAGE ."
+                }
+            }
+        }
+
+        stage('Stop and Remove Old Container') {
+            steps {
+                sh """
+                docker stop $APP_NAME || true
+                docker rm $APP_NAME || true
+                """
+            }
+        }
+
+        stage('Run New Container') {
+            steps {
+                sh """
+                docker run -d \
+                    --name $APP_NAME \
+                    -p 8080:8080 \
+                    --network=host \
+                    $DOCKER_IMAGE
+                """
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Deploy realizado com sucesso.'
+        }
+        failure {
+            echo '❌ Algo deu errado no deploy.'
+        }
+    }
+}
