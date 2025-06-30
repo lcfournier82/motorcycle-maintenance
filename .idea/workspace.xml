@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9abaa666-0723-4781-919f-508cbd0a3e29" name="Changes" comment="Adjust Encoding of the Project">
+    <list default="true" id="9abaa666-0723-4781-919f-508cbd0a3e29" name="Changes" comment="Update JenkinsFile with tools">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +175,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751244644505</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update JenkinsFile with tools">
+      <option name="closed" value="true" />
+      <created>1751244920329</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751244920329</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update JenkinsFile with tools">
+      <option name="closed" value="true" />
+      <created>1751245211876</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751245211876</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -227,6 +244,7 @@
     <MESSAGE value="Set Permission" />
     <MESSAGE value="Update JenkisFile" />
     <MESSAGE value="Adjust Encoding of the Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjust Encoding of the Project" />
+    <MESSAGE value="Update JenkinsFile with tools" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update JenkinsFile with tools" />
   </component>
 </project>

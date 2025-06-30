@@ -27,7 +27,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "docker build -t $DOCKER_IMAGE ."
+                    sh "sudo docker build -t $DOCKER_IMAGE ."
                 }
             }
         }
@@ -35,8 +35,8 @@ pipeline {
         stage('Stop and Remove Old Container') {
             steps {
                 sh """
-                docker stop $APP_NAME || true
-                docker rm $APP_NAME || true
+                sudo docker stop $APP_NAME || true
+                sudo docker rm $APP_NAME || true
                 """
             }
         }
@@ -44,7 +44,7 @@ pipeline {
         stage('Run New Container') {
             steps {
                 sh """
-                docker run -d \
+                sudo docker run -d \
                     --name $APP_NAME \
                     -p 8081:8081 \
                     --network=host \
