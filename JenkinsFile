@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        jdk 'jdk-21'
+    }
+
     environment {
         APP_NAME = 'motorcycle-maintenance-api'
         DOCKER_IMAGE = "motorcycle-maintenance-api:latest"
