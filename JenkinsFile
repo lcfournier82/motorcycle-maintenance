@@ -33,6 +33,15 @@ pipeline {
             }
         }
 
+        stage('List Current Directory') {
+            steps {
+                script {
+                    def dir = sh(script: "pwd", returnStdout: true).trim() // List current directory
+                    echo "Curr dir:\n${dir}"
+                }
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
