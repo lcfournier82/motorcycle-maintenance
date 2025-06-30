@@ -1,7 +1,7 @@
-FROM ubuntu:latest
-RUN apt-get update && apt-get install -y docker.io
-RUN useradd -m -u 1000 -g 1000 jenkins
-USER jenkins
-WORKDIR /home/jenkins
+FROM eclipse-temurin:21-jre-alpine
+WORKDIR /app
 COPY target/*.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
+# Create new jenkins user
+RUN adduser --gecos "" --disabled-password --quiet jenkins
+RUN echo "jenkins:jenkins" | chpasswd
