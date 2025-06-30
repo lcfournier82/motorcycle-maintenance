@@ -27,7 +27,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "sudo docker build -t $DOCKER_IMAGE ."
+                    sh "sudo docker build -t $DOCKER_IMAGE -f /var/lib/jenkins/workspace/motorcycle-maintenance-api/Dockerfile ."
                 }
             }
         }
