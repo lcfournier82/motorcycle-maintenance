@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9abaa666-0723-4781-919f-508cbd0a3e29" name="Changes" comment="Update JenkinsFile with unelevated permission">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="9abaa666-0723-4781-919f-508cbd0a3e29" name="Changes" comment="Fix permission issues">
       <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751249453024</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fix permission issues">
+      <option name="closed" value="true" />
+      <created>1751251152277</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1751251152277</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -263,6 +269,7 @@
     <MESSAGE value="Update JenkinsFile with tools" />
     <MESSAGE value="Update JenkinsFile with elevated permission" />
     <MESSAGE value="Update JenkinsFile with unelevated permission" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update JenkinsFile with unelevated permission" />
+    <MESSAGE value="Fix permission issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix permission issues" />
   </component>
 </project>
