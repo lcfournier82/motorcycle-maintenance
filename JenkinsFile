@@ -6,9 +6,9 @@ pipeline {
     }
 
     environment {
-        APP_NAME = 'motorcycle-maintenance-api'
-        DOCKER_IMAGE = "motorcycle-maintenance-api:latest"
-        JAR_NAME = 'motorcycle-maintenance-api.jar'
+        APP_NAME = 'motorcycle-maintenance'
+        DOCKER_IMAGE = "motorcycle-maintenance:latest"
+        JAR_NAME = 'motorcycle-maintenance.jar'
     }
 
     stages {
@@ -29,23 +29,6 @@ pipeline {
                 script {
                     def files = sh(script: "ls -l", returnStdout: true).trim() // Lists all files in the current directory, including details.
                     echo "Files:\n${files}"
-                }
-            }
-        }
-
-        stage('List Current Directory') {
-            steps {
-                script {
-                    def dir = sh(script: "pwd", returnStdout: true).trim() // List current directory
-                    echo "Curr dir:\n${dir}"
-                }
-            }
-        }
-        stage('Dockerfile') {
-            steps {
-                script {
-                    def fl = sh(script: "cat Dockerfile", returnStdout: true).trim() // List current directory
-                    echo "Dockerfile:\n${fl}"
                 }
             }
         }
