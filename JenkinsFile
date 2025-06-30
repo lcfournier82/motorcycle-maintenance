@@ -41,11 +41,19 @@ pipeline {
                 }
             }
         }
+        stage('Dockerfile') {
+            steps {
+                script {
+                    def fl = sh(script: "cat Dockerfile", returnStdout: true).trim() // List current directory
+                    echo "Dockerfile:\n${fl}"
+                }
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "sudo docker build -f Dockerfile -t $DOCKER_IMAGE ."
+                    sh "sudo docker build -t $DOCKER_IMAGE ."
                 }
             }
         }
